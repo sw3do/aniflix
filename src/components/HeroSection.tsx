@@ -100,10 +100,10 @@ export default function HeroSection({
                 <div className="w-1 h-6 sm:h-8 lg:h-10 bg-accent rounded-full" />
                 <div>
                   <span className="text-accent font-semibold text-xs sm:text-sm lg:text-base tracking-wider uppercase block">
-                    Öne Çıkan Anime
+                    Featured Anime
                   </span>
                   <span className="text-white/60 text-xs lg:text-sm">
-                    Şimdi Yayında
+                    Now Airing
                   </span>
                 </div>
               </div>
@@ -138,13 +138,13 @@ export default function HeroSection({
                 {anime.episodes && (
                   <div className="flex items-center space-x-1 sm:space-x-2 bg-white/10 backdrop-blur-sm px-2 sm:px-3 py-1 sm:py-2 rounded-lg">
                     <FaTv className="text-accent text-xs sm:text-sm" />
-                    <span className="text-white font-medium text-xs sm:text-sm">{anime.episodes} Bölüm</span>
+                    <span className="text-white font-medium text-xs sm:text-sm">{anime.episodes} Episodes</span>
                   </div>
                 )}
 
                 {anime.rank && anime.rank <= 50 && (
                   <div className="bg-accent px-2 sm:px-3 lg:px-4 py-1 sm:py-2 rounded-lg">
-                    <span className="text-white font-semibold text-xs sm:text-sm">#{anime.rank} EN İYİ</span>
+                    <span className="text-white font-semibold text-xs sm:text-sm">#{anime.rank} TOP RANKED</span>
                   </div>
                 )}
               </div>
@@ -156,13 +156,13 @@ export default function HeroSection({
                 
                 {anime.status === 'Currently Airing' && (
                   <span className="px-2 sm:px-3 py-1 bg-green-500/20 text-green-400 rounded-lg text-xs sm:text-sm font-medium border border-green-500/30">
-                    🔴 CANLI
+                    🔴 LIVE
                   </span>
                 )}
                 
                 {anime.score && anime.score >= 9.0 && (
                   <span className="px-2 sm:px-3 py-1 bg-purple-500/20 text-purple-300 rounded-lg text-xs sm:text-sm font-medium border border-purple-500/30">
-                    ⭐ BAŞYAPIT
+                    ⭐ TOP RANKED
                   </span>
                 )}
               </div>
@@ -197,7 +197,7 @@ export default function HeroSection({
                   transition={{ duration: 0.2 }}
                 >
                   <FaPlay className="text-xs sm:text-sm" />
-                  <span>Şimdi İzle</span>
+                  <span>Watch Now</span>
                 </motion.button>
 
                 <motion.button
@@ -208,7 +208,7 @@ export default function HeroSection({
                   transition={{ duration: 0.2 }}
                 >
                   <FaInfoCircle className="text-xs sm:text-sm" />
-                  <span>Detayları Gör</span>
+                  <span>More Info</span>
                 </motion.button>
               </div>
             </motion.div>
@@ -223,7 +223,7 @@ export default function HeroSection({
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1 }}
         whileHover={{ y: 5 }}
-        aria-label="Aşağı kaydır"
+        aria-label="Scroll down"
       >
         <FaChevronDown className="text-lg sm:text-xl animate-bounce" />
       </motion.button>
