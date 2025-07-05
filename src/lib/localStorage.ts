@@ -2,7 +2,7 @@ import { AnimeData } from './api';
 
 export interface WatchedAnime extends AnimeData {
   watchedAt: string;
-  progress: number; // 0-100 percentage
+  progress: number;
   currentEpisode: number;
   lastEpisodeWatched?: string;
 }
@@ -15,7 +15,6 @@ const CONTINUE_WATCHING_KEY = 'aniflix_continue_watching';
 const MY_LIST_KEY = 'aniflix_my_list';
 const RECENTLY_VIEWED_KEY = 'aniflix_recently_viewed';
 
-// Continue Watching functionality
 export function addToContinueWatching(anime: AnimeData, currentEpisode: number = 1, progress: number = 0): void {
   if (typeof window === 'undefined') return;
   
@@ -29,7 +28,7 @@ export function addToContinueWatching(anime: AnimeData, currentEpisode: number =
     };
 
     const filtered = existing.filter(item => item.mal_id !== anime.mal_id);
-    const updated = [watchedAnime, ...filtered].slice(0, 20); // Keep only 20 most recent
+    const updated = [watchedAnime, ...filtered].slice(0, 20);
 
     localStorage.setItem(CONTINUE_WATCHING_KEY, JSON.stringify(updated));
   } catch (error) {
@@ -119,7 +118,7 @@ export function addToRecentlyViewed(anime: AnimeData): void {
   try {
     const existing = getRecentlyViewed();
     const filtered = existing.filter(item => item.mal_id !== anime.mal_id);
-    const updated = [anime, ...filtered].slice(0, 50); // Keep only 50 most recent
+    const updated = [anime, ...filtered].slice(0, 50);
     
     localStorage.setItem(RECENTLY_VIEWED_KEY, JSON.stringify(updated));
   } catch (error) {
@@ -148,7 +147,7 @@ export function addToSearchHistory(query: string): void {
   try {
     const existing = getSearchHistory();
     const filtered = existing.filter(item => item.toLowerCase() !== query.toLowerCase());
-    const updated = [query, ...filtered].slice(0, 10); // Keep only 10 most recent
+    const updated = [query, ...filtered].slice(0, 10);
     
     localStorage.setItem(SEARCH_HISTORY_KEY, JSON.stringify(updated));
   } catch (error) {
@@ -190,4 +189,4 @@ export function clearAllData(): void {
   } catch (error) {
     console.error('Failed to clear all data:', error);
   }
-} 
+}

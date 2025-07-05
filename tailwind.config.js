@@ -1,4 +1,3 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -9,7 +8,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Netflix-inspired dark theme
         background: '#141414',
         foreground: '#ffffff',
         card: {

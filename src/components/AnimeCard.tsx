@@ -16,7 +16,6 @@ interface AnimeCardProps {
 
 const FALLBACK_IMAGE = `data:image/svg+xml,%3Csvg width='400' height='600' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='100%25' height='100%25' fill='%23374151'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='14' fill='%23d1d5db' text-anchor='middle' dy='.3em'%3ENo Image%3C/text%3E%3C/svg%3E`;
 
-// Optimized base classes with better responsive design
 const BASE_CLASSES = {
   container: "relative group cursor-pointer flex-shrink-0 p-2 w-40 h-60 xs:w-44 xs:h-66 sm:w-48 sm:h-72 md:w-52 md:h-78 lg:w-56 lg:h-84 xl:w-60 xl:h-90 2xl:w-64 2xl:h-96 3xl:w-72 3xl:h-[432px]",
   cardInner: "relative w-full h-full rounded-xl overflow-hidden bg-gray-800 shadow-lg transition-all duration-300 border border-gray-700/50 will-change-transform contain-layout",
@@ -33,7 +32,6 @@ const BASE_CLASSES = {
   watchLaterButton: "flex-1 p-1.5 sm:p-2 rounded-lg bg-black/60 border border-white/30 hover:bg-white/20 text-white transition-colors duration-150 shadow-lg"
 };
 
-// CSS-only hover effects for better performance
 const CSS_HOVER_STYLES = `
   .anime-card-hover {
     transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
