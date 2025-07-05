@@ -4,7 +4,7 @@ import { useEffect, useState, useMemo, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { AnimeData, AnimeEpisode, getAnimeEpisodes } from '@/lib/api';
-import { FaTimes, FaPlay, FaStar, FaCalendar, FaClock, FaTv, FaExternalLinkAlt, FaPlus, FaCheck, FaUsers, FaHeart, FaBroadcastTower, FaIndustry, FaGlobeAmericas } from 'react-icons/fa';
+import { FaTimes, FaPlay, FaStar, FaCalendar, FaTv, FaPlus, FaCheck, FaUsers, FaHeart, FaBroadcastTower } from 'react-icons/fa';
 import { addToMyList, removeFromMyList, isInMyList } from '@/lib/localStorage';
 import { useToast } from './Toast';
 
@@ -600,4 +600,4 @@ export default function AnimeModal({ anime, isOpen, onClose }: AnimeModalProps) 
       )}
     </AnimatePresence>
   );
-} 
+}

@@ -2,7 +2,7 @@
 
 import { useRef, useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaChevronLeft, FaChevronRight, FaPlay, FaInfoCircle } from 'react-icons/fa';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import AnimeCard from './AnimeCard';
 import { AnimeData } from '@/lib/api';
 
@@ -185,7 +185,7 @@ export default function AnimeCarousel({
                 viewport={{ once: true }}
                 transition={{ delay: 0.4 }}
               >
-                ⭐ Editor's Choice
+                ⭐ Editor&apos;s Choice
               </motion.p>
             )}
           </div>
@@ -308,4 +308,4 @@ export default function AnimeCarousel({
       </div>
     </section>
   );
-} 
+}

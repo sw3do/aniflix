@@ -47,16 +47,25 @@ module.exports = {
         sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
       },
       screens: {
+        'xs': '480px',
         '3xl': '1920px',
+        '4xl': '2560px',
       },
       spacing: {
         '18': '4.5rem',
+        '66': '16.5rem',
+        '72': '18rem',
+        '78': '19.5rem',
+        '84': '21rem',
         '88': '22rem',
+        '90': '22.5rem',
+        '96': '24rem',
       },
       aspectRatio: {
         '2/3': '2 / 3',
         '3/4': '3 / 4',
         '4/5': '4 / 5',
+        '21/9': '21 / 9',
       },
       backdropBlur: {
         xs: '2px',
@@ -74,6 +83,7 @@ module.exports = {
         'slide-up': 'slideUp 0.3s ease-out',
         'slide-down': 'slideDown 0.3s ease-out',
         'scale-in': 'scaleIn 0.2s ease-out',
+        'shimmer': 'shimmer 2s infinite',
       },
       keyframes: {
         fadeIn: {
@@ -92,6 +102,14 @@ module.exports = {
           '0%': { transform: 'scale(0.95)', opacity: '0' },
           '100%': { transform: 'scale(1)', opacity: '1' },
         },
+        shimmer: {
+          '0%': { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' },
+        },
+      },
+      maxWidth: {
+        '8xl': '88rem',
+        '9xl': '96rem',
       },
     },
   },
@@ -120,6 +138,11 @@ module.exports = {
           display: '-webkit-box',
           '-webkit-box-orient': 'vertical',
           '-webkit-line-clamp': '3',
+        },
+        '.gpu-accelerated': {
+          'transform': 'translateZ(0)',
+          'backface-visibility': 'hidden',
+          'perspective': '1000px',
         },
       });
 

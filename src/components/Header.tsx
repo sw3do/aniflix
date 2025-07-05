@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaSearch, FaBars, FaTimes, FaClock, FaFire, FaUser, FaBell } from 'react-icons/fa';
+import { FaSearch, FaBars, FaTimes, FaClock, FaFire } from 'react-icons/fa';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { getSearchHistory, addToSearchHistory } from '@/lib/localStorage';
@@ -116,7 +116,9 @@ export default function Header({ onSearch, searchQuery = '' }: HeaderProps) {
             >
               <Link
                 href="/"
-                className="text-accent text-xl sm:text-2xl lg:text-3xl font-black tracking-tight hover:text-accent-hover transition-all duration-300 transform hover:scale-105"
+                className={`text-accent text-xl sm:text-2xl lg:text-3xl font-black tracking-tight hover:text-accent-hover transition-all duration-300 transform hover:scale-105 ${
+                  isMobileMenuOpen ? 'lg:block hidden' : 'block'
+                }`}
               >
                 <span className="bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent">
                   ANIFLIX
@@ -363,4 +365,4 @@ export default function Header({ onSearch, searchQuery = '' }: HeaderProps) {
       </AnimatePresence>
     </>
   );
-} 
+}

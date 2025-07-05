@@ -4,7 +4,7 @@ import { useState, useMemo, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { AnimeData } from '@/lib/api';
-import { FaPlay, FaStar } from 'react-icons/fa';
+import { FaStar } from 'react-icons/fa';
 
 interface Top10CardProps {
   anime: AnimeData;
@@ -200,4 +200,4 @@ export default function Top10Card({
       </div>
     </motion.div>
   );
-} 
+}
